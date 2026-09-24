@@ -1,12 +1,11 @@
 from checkmate import checkmate
 
-
 def main():
     board = """\
 ....
 ..K.
 ....
-....\
+Q...\
 """
     print(board)
     checkmate(board)

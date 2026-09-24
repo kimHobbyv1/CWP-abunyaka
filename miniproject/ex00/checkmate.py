@@ -1,6 +1,6 @@
 def checkmate(board):
     if not isinstance(board, str):
-        print("Error")
+        print("Error: The board must be a string.")
         return
     rows = []
     for line in board.splitlines():
@@ -9,11 +9,11 @@ def checkmate(board):
 
     size = len(rows)
     if size == 0:
-        print("Error")
+        print("Error: Please Specify size.")
         return
     for row in rows:
         if len(row) != size:
-            print("Error")
+            print("Error: Size must be NxN.")
             return
     kr = -1
     kc = -1
@@ -25,7 +25,7 @@ def checkmate(board):
                 kc = c
                 king_count = king_count + 1
     if king_count != 1:
-        print("Error")
+        print("Error : There must be one king.")
         return
     
     for r in range(size):
